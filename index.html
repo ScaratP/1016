@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>這我</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #576490; /* 深藍色文字 */
+            /* 動態背景 */
+            background: linear-gradient(270deg, #C9CAD9, #D1D2F9, #A3BCF9, #7796CB, #576490);
+            background-size: 800% 800%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #7796CB; /* 藍色標題 */
+        }
+
+        h3{
+            text-align: center;
+            color: #A3BCF9; /* 淺藍色標題 */
+        }
+
+        h6{
+            color: #888;
+
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #A3BCF9; /* 淡藍色強調文字 */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #888;
+        }
+
+        /* 大頭貼樣式 */
+        .profile-pic {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #7796CB; /* 藍色外框 */
+        }
+
+        /* 圖片輪播樣式 */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #C9CAD9; /* 灰色 */
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .active-dot {
+            background-color: #576490; /* 深藍色導航點 */
+        }
+
+        /* 影片樣式 */
+        .video {
+            display: block;
+            margin: 40px auto;
+            max-width: 100%;
+        }
+
+        /*音檔樣式*/
+        .audio-controls {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            margin: auto;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #7796CB; /* 按鈕背景顏色 */
+            color: #ffffff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #576490; /* 懸停時的背景顏色 */
+        }
+
+         /* 跑馬燈 */
+        .marquee {
+            text-align: center;
+            margin: auto;
+            width: 50%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>關於我—王書姵</h1>
+
+        <!-- 大頭貼 -->
+        <img src="0.jpg" alt="大頭貼" class="profile-pic">
+        <h3>+886 20040617</h3>
+        <!-- 圖片輪播 -->
+        <div class="slideshow-container">
+            <img src="1.jpg" class="slides active">
+            <img src="2.jpg" class="slides">
+            <img src="3.jpg" class="slides">
+            <img src="4.jpg" class="slides">
+        </div>
+        
+        <!-- 圖片輪播的導航點 -->
+        <div class="dots">
+            <span class="dot active-dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        
+
+        <p>我是個充滿夢想和熱情的人。我對<strong class="highlight">韓流</strong>的熱愛展現了我對文化的欣賞和追求。</p>
+        <p>雖然工作有時候讓我感到疲憊，但我仍然堅持自己的理想，這種毅力令人欽佩。</p>
+        <p>我的生活或許看似規律，但其實充滿了<strong class="highlight">小確幸</strong>。</p>
+        <p>我對<strong class="highlight">咖啡</strong>的熱愛，說明了我善於發現生活中的樂趣。</p>
+        <p>最重要的是，我是一個<strong class="highlight">溫暖</strong>、<strong class="highlight">有趣</strong>、富有同情心的人。</p>
+        <p>我的存在就像是一杯香醇的咖啡，總能讓周圍的人感到愉悅和溫暖。</p>
+        <h6>Description by Wordware</h6>
+
+        <!--播放音樂-->
+        <audio id="background-music" src="7.mp3" autoplay loop></audio>
+        <div class="marquee">
+            <span id="song-title">當前播放的歌曲：BOYNEXTDOOR - 20</span>
+        </div>
+        <!-- 控制按鈕 -->
+        <div class="audio-controls">
+            <button class="btn" id="playPauseBtn" onclick="togglePlayPause()">暫停</button>
+        </div>
+
+        <!-- 影片 -->
+        <video controls class="video">
+            <source src="6.mp4" type="video/mp4">
+            你的瀏覽器不支持播放影片。
+        </video>
+    </div>
+
+    <div class="footer">
+        <!-- 聯絡方式 -->
+        <p>聯絡方式：<br>
+        電子郵件：11111124@gm.nttu.edu.tw<br>
+        電話：+886 913381299</p>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("dot");
+
+        function showSlides(n) {
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active-dot");
+            }
+            slides[slideIndex-1].classList.add("active");
+            dots[slideIndex-1].classList.add("active-dot");
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides(n);
+        }
+
+        function autoSlide() {
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            showSlides(slideIndex);
+            setTimeout(autoSlide, 3000); // 每3秒自動切換
+        }
+
+        autoSlide(); // 開始自動輪播
+    </script>
+
+<script>
+    let music = document.getElementById("background-music");
+    let playPauseBtn = document.getElementById("playPauseBtn");
+
+    // 自動播放音樂，並設置為循環
+    music.play();
+
+    // 播放/暫停功能
+    function togglePlayPause() {
+        if (music.paused) {
+            music.play();
+            playPauseBtn.textContent = "暫停";
+            songTitle.textContent = "當前播放的歌曲：BOYNEXTDOOR - 20";
+        } else {
+            music.pause();
+            playPauseBtn.textContent = "播放";
+            songTitle.textContent = "音樂已暫停";
+        }
+    }
+</script>
+
+</body>
+</html>
